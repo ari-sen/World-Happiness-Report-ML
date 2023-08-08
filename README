@@ -1,0 +1,32 @@
+Linear Regression:
+Recordings:
+From the RMSE and R2 of using 10 features, the RMSE is .61 and R^2 is .50. Starting off, this RMSE indictaes that the model's average 
+deviation between the actual and predicted value is .61, however a 50 percent R2 indicates the 50 percent of the model can be explained by the predictors. 
+I want to aim for a higher R^2,therefore seeing that the weight of freedom to make life choices and generosity are negative, a decrease of these features will lead to a higher life ladder value while for positive weights 
+like social support and confidence in the national government will lead to a higher life ladder value if increased.I'm going to move on to my other two chosen models to see out of curiosity if they will attain a lower 
+RMSE nad higher R^2. A test size of .30 achieves an RMSE of .60 and R^2 of .72.A test size of .25, achieves an RMSE of .60 and .62. A test size of .35 achieves an RMSE of .58 and R^2 of .76.
+
+Gradient Boosting Decision Tree:
+recordings:
+max_depth = 3,estimators=300: RMSE = .63357,R2=.4702.
+max_depth = 5.estimators = 500: RMSE = 0.6263,R2=0.4823
+max_depth=2,n_estimators=250: RMSE=0.5960,R2=0.5311
+max_depth=2,n_estimators=240: RMSE=0.5965,R2=0.5303
+max_depth=2,n_estimators = 249: RMSE=0.5976,R2=0.5285
+From these 5 hyperparameters,the best values before adjusting the test_size,were max_depth =2,n_estimators=250, as this is where the root mean squared error was the lowest, and the R Squared is the closest to 1. 
+However, when adjusting the test_szie to .35, the test size that got the best values 
+for my linear regression model,the RMSE became less fit for the model becoming .6644 while the R2 was the highest out of all the GBDT R2 values with a test size of .15 being 0.6796. 
+
+Random Forest
+Recordings:
+
+
+max_depth=32,n_estimators = 400,RMSE:0.6323,R2=0.4722
+max_depth=16,n_estimators = 250,RMSE:0.6377,R2=0.4631
+max_depth=16,n_estimators = 500,RMSE:0.6308,R2=0.4747
+max_depth=17,n_estimators = 500,RMSE:0.6334,R2=0.4704
+
+
+After changing the test_size to .35,the best values for the random forest model was found to be max_depth=17,n_estimators = 500,which yielded RMSE = 0.6043 and R2 = 0.7350. 
+Overall from comparing these three models, the best performing are the Linear Regression Model and Random Forest Model with the Linear Regression beign the better fit since it's 
+RMSE was lower,indicating the predicted value wasn't as far off as other models form the predicted values. In order to confirm this and make interpretability easier, I'm going to graph all the values. 
