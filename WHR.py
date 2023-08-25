@@ -49,7 +49,7 @@ df.drop(columns = ['country','year','Positive affect','Negative affect','Deliver
 '''
 Cleaning of infinity and NaN Values: After using methods such as winstorization and fillna to detect outliers and replace missing values,
 I ensured there were no NaN or infinity values by looking for the location of remaining missing values or using the np.inf function to detect any infinity values. 
-I got 0 and false as a result of checking for both instances, which led to having to use a function to exclude any rows that contains those values. I am not sure why after fitting, I kpet getting the error of there being a NaN or infinity value. 
+I got 0 and false as a result of checking for both instances, which led to having to use a function to exclude any rows that contains those values. I am not sure why after fitting, I kept getting the error of there being a NaN or infinity value. 
 However, since for a majority of my data, missing data was filled and outliers were replaced,I didn't mind making the decision of dropping 1-2 rows to get my model to fit.
 '''
 df =df[~df.isin([np.nan, np.inf, -np.inf]).any(1)]
