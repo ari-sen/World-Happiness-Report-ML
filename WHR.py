@@ -214,20 +214,4 @@ plt.show()
 
 
 ​
-RMSE_results = [lr_rmse,gbdt_rmse,rf_rmse]
-R2_Results = [lr_r2,gbdt_r2,rf_r2]
-labels = ['LR', 'GBDT', 'RF']
-​
-rg = np.arange(3)
-width = 0.35
-plt.bar(rg, RMSE_Results, width, label="RMSE")
-plt.bar(rg + width, R2_Results, width, label='R2')
-plt.xticks(rg + width/2, labels)
-plt.xlabel("Models")
-plt.ylabel("RMSE/R2")
-plt.ylim([0, 1])
-​
-plt.title('Model Performance')
-plt.legend(loc='upper left', ncol=2)
-plt.show()
 ​
